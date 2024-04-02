@@ -30,7 +30,7 @@ const useCanvas: useCanvasType = (draw: DrawFunction) => {
       predraw(context, canvas);
       frameCount++;
       draw(context, frameCount);
-      coords.forEach((coord) => drawCoordinate(context, coord))
+      coords.forEach((coord) => drawCoordinate(context, coord));
       postdraw();
       animationFrameId = window.requestAnimationFrame(render);
     };
